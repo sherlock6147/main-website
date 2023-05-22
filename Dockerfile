@@ -14,8 +14,4 @@ RUN adduser --disabled-password --no-create-home django
 
 USER django
 
-RUN mkdir -p /app/staticfiles
-
-CMD ["python3", "manage.py", "collectstatic", "-y", "4", "--master", "--enable-threads", "--module", "website.wsgi"]
-
 CMD ["uwsgi", "--socket", ":9000", "--workers", "4", "--master", "--enable-threads", "--module", "website.wsgi"]
