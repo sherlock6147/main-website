@@ -20,7 +20,7 @@
     {% endblock %}
 </head>
 {% include 'base/snippets/navbar.html' %}
-<body class="bg-black w-full min-h-screen font-ubuntu-mono text-zinc-50 list-none" >
+<body class="bg-zinc-800 w-full min-h-screen font-ubuntu-mono text-zinc-50 list-none" >
     <ul class="container mx-auto flex flex-col gap-2 mt-16 absolute px-3 top-0 left-0 right-0 z-10" id="msg-element">
         {% for message in messages %}
             {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
