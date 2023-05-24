@@ -16,4 +16,4 @@ USER django
 
 CMD ["uwsgi", "--socket", ":9000", "--workers", "4", "--master", "--enable-threads", "--module", "website.wsgi"]
 
-RUN chown -R user:user /app
+RUN sudo chown -R ec2-user:ec2-user /app
