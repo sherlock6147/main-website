@@ -19,12 +19,12 @@ def prepare_context(request,access_level=1):
 def home(request):
     context = {}
     context = prepare_context(request)
-    context['case_studies'] = get_case_studies()
-    tech_tags = set()
-    for study in get_case_studies():
-        for tag in study.technologies_used.all():
-            tech_tags.add(tag.name)
-    context['tech_tags'] = tech_tags
+    # context['case_studies'] = get_case_studies()
+    # tech_tags = set()
+    # for study in get_case_studies():
+    #     for tag in study.technologies_used.all():
+    #         tech_tags.add(tag.name)
+    # context['tech_tags'] = tech_tags
     print(context)
     return render(request,'base/home.html',context)
 

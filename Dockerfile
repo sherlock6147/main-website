@@ -6,7 +6,7 @@ COPY requirements.txt /requirements.txt
 RUN apk add --upgrade --no-cache build-base linux-headers && \
     pip install --upgrade pip && \
     pip install -r /requirements.txt
-
+RUN apk add python3
 COPY app/ /app
 WORKDIR /app
 
